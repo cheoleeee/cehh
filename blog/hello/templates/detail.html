@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="container">
+    <br><br>
+    <h1>디테일 페이지 입니다.</h1>
+    <br><br>
+    <h1>제목 : {{blog.title}}</h1>
+    <p> 작성 날짜 : {{blog.pub_date}} </p>
+    <P> 자세한 본문 : {{blog.body}} </P>
+  </div>
+  <a href="{% url 'renew' blog.id %}">수정</a>
+  <a href="{% url 'delete' blog.id %}">삭제</a>
+  </body>
+  {% endblock %}
